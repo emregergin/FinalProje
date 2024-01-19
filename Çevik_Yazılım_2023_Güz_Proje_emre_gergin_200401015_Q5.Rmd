@@ -1,0 +1,39 @@
+---
+title: "Proje Rapor: Emre Gergin 200401015"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Q5: Veri Mühendisliği
+
+Bu bölümde ise veri setinde futbolcuların ortalama gol sayısı, asist sayısı, çıktıkları maç sayısı ve market değerleri üzerinden bir hesaplama yapılıp veri seti hakkında fikir sahibi olunmaya çalışılmıştır.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Futbolcuların ortalama attıkları goller
+AvgGoal <- mean(data$Goals)
+
+# Futbolcuların ortalama yaptıkları asistler
+AvgAssist <- mean(data$Assists)
+
+# Futbolcuların ortalama çıktıkları maç sayısı
+AvgGame <- mean(data$GamesPlayed)
+
+# Futbolcuların ortalama market değerleri
+AvgValue <- mean(data$Value)
+
+Average <- data.frame(
+  Averages = c("Average Goals", "Average Assists", "Average Games Played", "Average Values"),
+  Value = c(AvgGoal, AvgAssist, AvgGame, AvgValue)
+)
+
+Average$Value <- as.numeric(format(Average$Value, scientific = FALSE))
+
+options(scipen = 999)
+Average
+```
+
+* **Oyuncuların Kaydettiği Ortalama Gol Sayısı:** `r Average$Value[[1]]`
+* **Oyuncuların Yaptığı Ortalama Asist Sayısı:** `r Average$Value[[2]]`
+* **Oyuncuların Çıktığı Ortalama Maç Sayısı:** `r Average$Value[[3]]`
+* **Oyuncuların Ortalama Market Değerleri:** `r Average$Value[[4]]`
