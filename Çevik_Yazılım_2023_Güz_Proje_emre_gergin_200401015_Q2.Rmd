@@ -1,0 +1,34 @@
+---
+title: "Proje Rapor: Emre Gergin 200401015"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Q2: Proje Amacı
+
+**Projenin Hedefi**
+
+Projenin hedefi, yıldız oyuncunun yerini doldurabilecek ve kulüp tarafından belirlenen kriterleri sağlayan potansiyel forvet adaylarını seçmektir. Ayrıca hem sportif performans hem de ekonomik dengeler gözetilerek kulüp çıkarları korunması gerekmektedir. Proje, kulübün sportif başarısı ve finansal sürdürülebilirliği açısından önemlidir. Bu nedenle, bu problemi çözmek için etkili bir strateji ve iş planı geliştirilmesi gerekmektedir.
+
+**Projenin Girdileri**
+
+Projenin girdileri şunlar olacaktır:
+
+* Transfer olan forvet oyuncusunun istatiksel verileri
+* Avrupa liglerinde en az 15 gol, 3 asist yapmış ve en az 28 maça çıkmış potansiyel santrfor adaylarının verileri
+* Bu oyuncuların piyasa değerleri
+
+**Projenin Çıktıları**
+
+Projenin çıktıları ise şunlar olacaktır:
+
+* Kulübün mevcut ekonomisine uygun, sportif başarı sağlaması beklenen forvet adaylarında oluşan bir veri seti
+
+**Problemin Çözümü**
+
+Problemin çözümü için, aşağıdaki adımlar takip edilecektir:
+
+1. Takımdan ayrılan forvet oyuncusunun genel performansı analiz edilerek, kulübün ihtiyaç duyduğu santrfor oyuncusunun özellikleri belirlenir.
+2. Ayrılan oyuncunun istatistiklerini yakalayabilen(veya bunun üstü performans gösteren) ve market değeri 13 milyon euro'yu aşmayan futbolculardan oluşan bir oyuncu havuzu oluşturulur.
+3. Bu elde edilen oyuncu havuzu futbol kulübünün yönetimine sunularak ortaya çıkan iş problemi çözüme kavuşturulur.
