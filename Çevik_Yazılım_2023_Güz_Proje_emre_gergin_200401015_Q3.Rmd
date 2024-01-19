@@ -1,0 +1,39 @@
+---
+title: "Proje Rapor: Emre Gergin 200401015"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Q3: Veri Seti Keşifsel Analizi
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Verisetini oku
+data <- read.csv("./players_data.csv")
+```
+
+Kullanılan veri seti Kaggle web sitesinden indirilmiştir. Aşağıda bu veri setinin bağlantısı bulunmaktadır:
+
+* [Football Players' Stats and Market Values](https://www.kaggle.com/datasets/hiusanmaz/football-players-dataset)
+
+Bu veri seti **readr::read_csv()** fonksiyonu kullanılarak **`r class(data)[[1]]`** tipinde bir değişkene atanmıştır. Veri boyutları ve veri setinin görsel hali ise aşağıdaki gibidir:
+
+**Football Players' Stats**
+
+* Satır Sayısı: `r nrow(data)`
+* Sütun Sayısı: `r ncol(data)`
+* Kullanılacak Sütunlar: (Name, Club, GamesPlayed, Goals, Assists, Value)
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+data
+```
+
+Veri seti incelendiğinde, ele alınan problem için bulunması gerekmeyen sütunlar olduğu görülmektedir.
+
+Bu projede **Football Players' Stats** veri seti içerisinden bazı sütunlar çekilecek olup daha sade veriler elde edilecektir.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+
+data <- select(data, Name, Club, GamesPlayed, Goals, Assists, Value)
+```
