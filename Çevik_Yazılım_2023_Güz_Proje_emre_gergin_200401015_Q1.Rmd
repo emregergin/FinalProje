@@ -1,0 +1,28 @@
+---
+title: "Proje Rapor: Emre Gergin 200401015"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Q1: Problem Tanımı
+
+**Problemin Tanımı**
+
+Yendik Milan FC’nin forvet pozisyonundaki yıldız oyuncusu, 15 milyon Euro karşılığında başka bir takıma transfer olmuştur. Takımdan ayrılan bu oyuncu, takımın gol yükünü çektiğinden dolayı olası bir santrfor transferi kulübün sportif başarısını sürdürebilmesi açısından büyük önem arz etmektedir.
+
+Aşağıda bahsedilen oyuncunun sezon içerisindeki kaydettiği istatistikler yer almaktadır:
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(readr)
+library(knitr)
+
+# CSV dosyasını okuyun
+fdata <- read_csv("./player_data.csv")
+
+fdata$market_value <- as.numeric(format(fdata$market_value, scientific = FALSE))
+
+# Veriyi görüntüleyin
+options(scipen = 999)
+knitr::kable(fdata)
+```
