@@ -1,0 +1,31 @@
+---
+title: "Proje Rapor: Emre Gergin 200401015"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Q4 : Veri Seti Ön İşlemesi
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+data
+```
+
+Fakat veri setinde de görüldüğü üzere market değeri olarak verilen sütun sayısal bir ifade değildir. Bu yüzden verinin işlenerek **character** tipinden **numeric** tipine dönüştürülmesi gerekmektedir.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# value sütunundaki € ifadesini kaldırın
+data$Value <- gsub("€", "", data$Value)
+
+# M geçen verileri işleyin
+data$Value[grepl("M", data$Value)] <- as.numeric(gsub("M", "", data$Value[grepl("M", data$Value)])) * 1000000
+
+# K geçen verileri işleyin
+data$Value[grepl("K", data$Value)] <- as.numeric(gsub("K", "", data$Value[grepl("K", data$Value)])) * 1000
+
+# Sonucu kontrol et
+data$Value <- as.numeric(format(data$Value, scientific = FALSE))
+data
+```
+
+Value sütunundaki değerler *character* tipinden *numeric* tipine dönüştürülmüştür.
