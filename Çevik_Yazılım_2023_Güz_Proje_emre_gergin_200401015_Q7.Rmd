@@ -1,0 +1,19 @@
+---
+title: "Proje Rapor: Emre Gergin 200401015"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Q7: Sonuç Değerlendirme ve Tavsiyeler
+
+Sonuç bölümünde ise projenin ne kadar geçerli olduğuyla alakalı çıkarımlara yer verilmiştir.
+
+Proje, detaylı bir veri analizi ve gözlem aşamasını içeriyordu. Transfer olan oyuncu performans verileri ve potansiyel adayların saha içi performansları incelenerek, transfer için en uygun adaylar belirlendi. Scout raporları ve doğrudan gözlemler, projenin sağlam temeller üzerine inşa edilmesini sağladı ve bunun sayesinde başta verilen iş problemine uygun bir çözüm yolu geliştirilmeye çalışıldı.
+
+Elde edilen veriler ışığında kulübün koşullarına uygun oyuncular listelendi ve veriler arasında tutarsızlık görülmedi.
+
+Projenin ana problemini doğrudan ve eksiksiz bir şekilde çözmektedir. Bu sonuçlar kulüp yöneticileri tarafından belirli isimlere direkt gidilerek transfer görüşmesi yapabilmesi imkan sağlamaktadır ve bu şekilde kullanılabilir.
+
+Projenin geliştirilebilecek kısımlarında ise kulüp tarafından gelebilecek farklı koşullara(proje için girdi) karşın proje dokümanında güncellemeler gerekebilir.
+
