@@ -1,0 +1,35 @@
+---
+title: "Proje Rapor: Emre Gergin 200401015"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Q6: Veri Analizi
+
+Kulübün satışının gerçekleştirdiği oyuncunun istatistikleri aşağıda verilmiştir.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(readr)
+library(knitr)
+
+# CSV dosyasını okuyun
+fdata <- read_csv("./player_data.csv")
+
+# Veriyi görüntüleyin
+knitr::kable(fdata)
+```
+
+Bu bölümde ise daha önce bahsedilen kriterlere bağlı olarak bunlara uygun oyuncuların listelemesi yapılmıştır. Bu veri seti ışığında kulüp listedeki oyuncularla transfer görüşmesi gerçekleştirmeyi planlamaktadır.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# dplyr paketini yükle
+library(dplyr)
+
+# Koşulları sağlayan satırları filtrele
+data <- data %>%
+  filter(Goals >= 15 & Assists >= 3 & GamesPlayed >= 28 & Value <= 13000000)
+
+# Sonuçları görüntüle
+data
+```
